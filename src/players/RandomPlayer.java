@@ -10,8 +10,8 @@ public class RandomPlayer implements Player {
 
     protected Random random;
     
-    public RandomPlayer() {
-        this.random = new Random(123);
+    public RandomPlayer(Random random) {
+        this.random = random;
     }
 
     @Override

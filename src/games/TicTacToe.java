@@ -158,17 +158,17 @@ public class TicTacToe extends AbstractGame {
      * Method which is used to represents a copy of the game. It is used to simulate a virtual player
      * @return instance of TicTacToe
      */
-   /*  @Override 
+    @Override 
     public TicTacToe copy() {
-        res = new TicTacToe(super.player1, super.player2);
-        res.board = new Player[3][3];
+        TicTacToe res = new TicTacToe(super.player1, super.player2);
+        res.gameTab = new Player[3][3];
+        res.currentPlayer = this.currentPlayer;
         for (int i=0; i<this.gameTab.length; i++) {
             for (int j=0; j<this.gameTab[i].length; j++) {
-                res.board[i][j] = this.gameTab[i][j]; 
+                res.gameTab[i][j] = this.gameTab[i][j]; 
             }
         }
-        return res; */
-    //} 
-
+        return res;
+    } 
 }
 

@@ -53,7 +53,7 @@ public interface Game {
      * @return a instance of Game 
      */
 
-     /* public abstract Game copy(); */
+     public abstract Game copy();
 
 
 }

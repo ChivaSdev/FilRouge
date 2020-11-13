@@ -17,7 +17,6 @@ public class PlayersTests {
         RandomPlayerTests randomTester = new RandomPlayerTests();
         ok = ok && randomTester.testChooseMove();
 
-
         System.out.println(ok ? "All tests passed" : "At least one failed");
 
     }

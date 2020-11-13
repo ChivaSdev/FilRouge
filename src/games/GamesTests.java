@@ -30,6 +30,9 @@ public class GamesTests {
         ok = ok && ticTacToeTester.testGetWinner();
         ok = ok && ticTacToeTester.testIsOver();
 
+        ok = ok && nimTester.testCopy();
+        ok = ok && ticTacToeTester.testCopy();
+
         System.out.println(ok ? "All tests passed" : "At least one test failed");
     }
     

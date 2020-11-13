@@ -118,11 +118,11 @@ public class Nim extends AbstractGame {
     /** Method used to simulate a virtual player  
      * @ return 
     */
-    /* @Override
+    @Override
     public Nim copy() {
-        res = new Nim(this.initNbMatches, this.maxNbMatches, super.player1, super.player2);
+        Nim res = new Nim(this.initNbMatches, this.maxNbMatches, super.player1, super.player2);
         res.currentNbMatches = this.currentNbMatches;
         res.currentPlayer = super.currentPlayer;
         return res;
-    } */
+    }
 } 

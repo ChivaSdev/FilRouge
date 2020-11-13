@@ -24,6 +24,7 @@ public class TestOrchestrator {
 
         Scanner scanner = new Scanner(System.in);
         Player player1 = new RandomPlayer();
+        player1.random(123);
         Player player2 = new Human("Moi", scanner);
         TicTacToe game = new TicTacToe(player1, player2);
         Orchestrator orchestrator = new Orchestrator(game);
