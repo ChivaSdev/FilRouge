@@ -30,10 +30,16 @@ public class GamesTests {
         ok = ok && ticTacToeTester.testGetWinner();
         ok = ok && ticTacToeTester.testIsOver();
 
-        ok = ok && nimTester.testCopy();
-        ok = ok && ticTacToeTester.testCopy();
+        TicTacToeWithHintsTests ticTacToeWithHintsTester = new TicTacToeWithHintsTests();
+        ok = ok && ticTacToeWithHintsTester.testGetCurrentPlayer();
+        ok = ok && ticTacToeWithHintsTester.testExecuteAndIsValid();
+        ok = ok && ticTacToeWithHintsTester.testValidMoves();
+        ok = ok && ticTacToeWithHintsTester.testWins();
+        ok = ok && ticTacToeWithHintsTester.testGetWinner();
+        ok = ok && ticTacToeWithHintsTester.testIsOver();
+        ok = ok && ticTacToeWithHintsTester.testHints();
 
         System.out.println(ok ? "All tests passed" : "At least one test failed");
     }
-    
+
 }
