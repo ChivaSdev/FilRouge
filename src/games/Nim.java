@@ -36,7 +36,6 @@ public class Nim extends AbstractGame {
         return this.currentNbMatches;
     }
 
-
     /**
      * Method which represents the actual situation of the game 
      * @return String
@@ -54,7 +53,6 @@ public class Nim extends AbstractGame {
     @Override
     public void doExecute(int nbMatches) {
         this.currentNbMatches = getCurrentNbMatches() - nbMatches;
-        super.currentPlayer = super.getCurrentPlayer();
     }
 
     /**
@@ -74,8 +72,7 @@ public class Nim extends AbstractGame {
      */
     @Override
     public boolean isOver() {
-        this.currentNbMatches = getCurrentNbMatches();
-        return this.currentNbMatches <= 0;
+        return this.currentNbMatches == 0;
     }
 
     /**
@@ -84,7 +81,6 @@ public class Nim extends AbstractGame {
      */
     @Override
     public Player getWinner(){
-        super.currentPlayer = super.getCurrentPlayer();
         if (isOver() == true) {
             return super.currentPlayer;
         } else {
