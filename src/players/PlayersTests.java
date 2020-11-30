@@ -1,4 +1,4 @@
-/* package players;
+package players;
 
 import playerstests.*;
 
@@ -23,4 +23,4 @@ public class PlayersTests {
         System.out.println(ok ? "All tests passed" : "At least one failed");
 
     }
-}     */
+}    

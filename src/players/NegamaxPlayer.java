@@ -46,4 +46,8 @@ public class NegamaxPlayer implements Player{
         }
         return bestMove;
     }
+
+    public String toString() {
+        return "Joueur aléatoire : " + this.hashCode();
+    }
 }

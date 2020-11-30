@@ -1,4 +1,4 @@
-/* package plays;
+package plays;
 
 import playstests.*;
 
@@ -13,8 +13,6 @@ public class PlaysTests {
 
         System.out.println(ok ? "All tests passed" : "At least one failed");
 
-
     }
     
 }
- */

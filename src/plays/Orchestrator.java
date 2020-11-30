@@ -27,9 +27,13 @@ public class Orchestrator {
             game.isOver();
         }
 
-        System.out.println(game.getWinner().toString() + " has won !");
+        if (game.getWinner() == null) {
+            System.out.println("It's a draw !");
+        } else {
+            System.out.println(game.getWinner() + " has won !");
+        }
+        
         System.out.println(game.situationToString());
-
         scanner.close();
     }
 }

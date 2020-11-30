@@ -98,9 +98,7 @@ public class TicTacToe extends AbstractGame {
                 return p;
             }
         }
-        
-        return null;
-        
+        return null; 
     }
 
     /**
