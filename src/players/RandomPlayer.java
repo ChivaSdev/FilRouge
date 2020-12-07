@@ -11,7 +11,7 @@ public class RandomPlayer implements Player {
     protected Random random;
     
     public RandomPlayer(Random random) {
-        this.random = random;
+        this.random = new Random();
     }
 
     @Override
