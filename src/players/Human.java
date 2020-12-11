@@ -30,34 +30,31 @@ public class Human implements Player{
      */
     @Override
     public int chooseMove(Game game) {
-        int playerChoice = 0;
-        boolean errorMismatch = false;
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> validMovesList = game.validMoves();
+      int playerChoice = 0;
+      boolean errorMismatch = false;
+      ArrayList<Integer> validMovesList = game.validMoves();
+      for (int i=0; i<validMovesList.size(); i++) {
+        System.out.println(game.moveToString(validMovesList.get(i)));
+      }
 
+      System.out.println("What's your choice ? : ");
 
-        for (int i=0; i<validMovesList.size(); i++) {
-            System.out.println(game.moveToString(validMovesList.get(i)));
+      while (!errorMismatch)
+      {
+        try {
+          playerChoice = this.scanner.nextInt();
+          while (game.isValid(playerChoice) == false) {
+            System.out.println("Choice is not valid ! Try again");
+            System.out.println("What's your choice ? : ");
+            playerChoice = this.scanner.nextInt();
+          }
+          errorMismatch = true;
+        } catch (InputMismatchException e) {
+          this.scanner.nextLine();
+          System.out.println("Choice is not valid ! Try again");
         }
-
-        System.out.println("What's your choice ? : ");
-
-        while (!errorMismatch)
-        {
-            try {
-              playerChoice = sc.nextInt();
-              while (game.isValid(playerChoice) == false) {
-                  System.out.println("Choice is not valid ! Try again");
-                  System.out.println("What's your choice ? : ");
-                  playerChoice = sc.nextInt();
-              }
-              errorMismatch = true;
-            } catch (InputMismatchException e) {
-              sc.nextLine();
-              System.out.println("Choice is not valid ! Try again");
-            }
-        }
-        return playerChoice;
+      }
+      return playerChoice;
     }
 
     /**
